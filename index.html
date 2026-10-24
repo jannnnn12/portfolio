@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meljohn Lozada Sumalinog | IT & Developer Portfolio</title>
+  <!-- Tailwind CSS via CDN for responsive styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          colors: {
+            brand: {
+              400: '#38bdf8',
+              500: '#0ea5e9',
+              600: '#0284c7',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+  <!-- Navigation Bar -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-slate-950/85 backdrop-blur-md border-b border-slate-800/80">
+    <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#home" class="text-xl font-extrabold tracking-tight text-white flex items-center gap-2">
+        <span class="w-8 h-8 rounded-lg bg-brand-500 flex items-center justify-center text-slate-950 font-black">M</span>
+        <span>Jann<span class="text-brand-400">.dev</span></span>
+      </a>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+        <a href="#home" class="hover:text-brand-400 transition">Home</a>
+        <a href="#about" class="hover:text-brand-400 transition">About & Skills</a>
+        <a href="#projects" class="hover:text-brand-400 transition">Projects</a>
+        <a href="#contact" class="px-4 py-2 rounded-lg bg-brand-500 hover:bg-brand-400 text-slate-950 font-semibold transition">Contact Me</a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" aria-label="Toggle Menu" class="md:hidden text-slate-300 hover:text-white focus:outline-none p-2">
+        <i id="menu-icon" class="fa-solid fa-bars text-xl"></i>
+      </button>
+    </nav>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-4 pt-2 pb-4 space-y-2 text-sm font-medium">
+      <a href="#home" class="mobile-link block py-2 px-3 rounded hover:bg-slate-800 text-slate-200">Home</a>
+      <a href="#about" class="mobile-link block py-2 px-3 rounded hover:bg-slate-800 text-slate-200">About & Skills</a>
+      <a href="#projects" class="mobile-link block py-2 px-3 rounded hover:bg-slate-800 text-slate-200">Projects</a>
+      <a href="#contact" class="mobile-link block py-2 px-3 rounded bg-brand-500 text-slate-950 font-semibold text-center mt-2">Contact Me</a>
+    </div>
+  </header>
+
+  <!-- 1. HOME / HERO SECTION -->
+  <section id="home" class="pt-28 pb-16 md:pt-36 md:pb-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+    <div class="flex flex-col-reverse md:flex-row items-center justify-between gap-10">
+      
+      <!-- Intro Text -->
+      <div class="w-full md:w-3/5 text-center md:text-left space-y-5">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/30 text-brand-400 text-xs font-semibold uppercase tracking-wider">
+          <span class="w-2 h-2 rounded-full bg-brand-400 animate-pulse"></span>
+          Available for IT & Dev Projects
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+          Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-indigo-400">Meljohn Lozada Sumalinog</span>
+        </h1>
+
+        <p class="text-lg sm:text-xl text-slate-300 font-medium">
+          Undergraduate Student at Cebu Eastern College Inc. &bull; Aspiring Full-Stack, IoT & Game Developer
+        </p>
+
+        <p class="text-slate-400 leading-relaxed max-w-2xl mx-auto md:mx-0">
+          You can also call me <strong class="text-slate-200">Jann</strong>. Based in Cebu, Philippines, I build practical software and hardware solutions ranging from AI-integrated IoT monitoring systems and responsive web apps to 3D interactive games and digital media content.
+        </p>
+
+        <div class="pt-3 flex flex-wrap items-center justify-center md:justify-start gap-4">
+          <a href="#projects" class="px-6 py-3 rounded-xl bg-brand-500 hover:bg-brand-400 text-slate-950 font-bold shadow-lg shadow-brand-500/20 transition flex items-center gap-2">
+            <span>View My Projects</span>
+            <i class="fa-solid fa-arrow-right text-sm"></i>
+          </a>
+          <a href="#contact" class="px-6 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 font-semibold border border-slate-700 transition">
+            Get In Touch
+          </a>
+        </div>
+      </div>
+
+      <!-- Profile Photo -->
+      <div class="w-full md:w-2/5 flex justify-center">
+        <div class="relative group">
+          <div class="absolute -inset-1 bg-gradient-to-r from-brand-500 to-indigo-600 rounded-3xl blur opacity-40 group-hover:opacity-70 transition duration-500"></div>
+          <div class="relative w-64 h-72 sm:w-72 sm:h-80 rounded-3xl overflow-hidden border-2 border-slate-800 bg-black shadow-2xl">
+            <img src="img/11.jpg" alt="Meljohn Lozada Sumalinog" class="w-full h-full object-cover object-top" />
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 2. ABOUT & SKILLS SECTION -->
+  <section id="about" class="py-16 md:py-24 bg-slate-900/50 border-y border-slate-800/80 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto space-y-12">
+      
+      <div class="text-center max-w-2xl mx-auto space-y-2">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-brand-400">About & Capabilities</h2>
+        <p class="text-3xl sm:text-4xl font-extrabold text-white">Background & Technical Skills</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        
+        <!-- About Me Column -->
+        <div class="lg:col-span-5 bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 space-y-4">
+          <h3 class="text-xl font-bold text-white flex items-center gap-2">
+            <i class="fa-solid fa-user-graduate text-brand-400"></i>
+            <span>Who I Am</span>
+          </h3>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            I am an undergraduate student at <strong class="text-white">Cebu Eastern College Inc.</strong> in Cebu City, Philippines. I enjoy bridging the gap between software and hardware—whether that means wiring microcontrollers and IP cameras for real-time computer vision, coding desktop applications in C#, or designing immersive game worlds.
+          </p>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            Outside of coding and assembling custom desktop PC setups, I also direct and produce AI-assisted vertical short dramas under <strong class="text-white">Kwentong Damdamin</strong> and work on digital photo restoration and editing.
+          </p>
+
+          <div class="pt-3 border-t border-slate-800 grid grid-cols-2 gap-4 text-xs">
+            <div>
+              <span class="text-slate-400 block">Location</span>
+              <span class="font-semibold text-slate-200">Cebu City, Philippines</span>
+            </div>
+            <div>
+              <span class="text-slate-400 block">Education</span>
+              <span class="font-semibold text-slate-200">Cebu Eastern College Inc.</span>
+            </div>
+            <div>
+              <span class="text-slate-400 block">Focus Areas</span>
+              <span class="font-semibold text-slate-200">IoT, Web Dev, Game Dev</span>
+            </div>
+            <div>
+              <span class="text-slate-400 block">Hardware</span>
+              <span class="font-semibold text-slate-200">PC Building & Diagnostics</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skills Grid Column -->
+        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-5">
+          
+          <!-- Skill Card 1 -->
+          <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-brand-500/40 transition">
+            <div class="w-10 h-10 rounded-xl bg-brand-500/10 text-brand-400 flex items-center justify-center mb-4">
+              <i class="fa-solid fa-code text-lg"></i>
+            </div>
+            <h4 class="text-lg font-bold text-white mb-2">Web & Software Dev</h4>
+            <p class="text-xs text-slate-400 mb-4">Building responsive frontend layouts, web dashboards, and object-oriented desktop applications.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-200">HTML5 & CSS3</span>
+              <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-200">JavaScript</span>
+              <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-200">C# (.NET)</span>
+              <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-200">Git & GitHub</span>
+            </div>
+          </div>
+
+          <!-- Skill Card 2 -->
+          <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-brand-500/40 transition">
+            <div class="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center mb-4">
+              <i class="fa-solid fa-microchip text-lg"></i>
+            </div>
+            <h4 class="text-lg font-bold text-white mb-2">IoT & Computer Vision</h4>
+            <p class="text-xs text-slate-400 mb-4">Integrating cameras, microcontrollers, and sensors with real-time detection dashboards.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-200">Microcontrollers</span>
+              <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-200">IP Cameras</span>
+              <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-200">Computer Vision</span>
+              <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-200">Sensor Modules</span>
+            </div>
+          </div>
+
+          <!-- Skill Card 3 -->
+          <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-brand-500/40 transition">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-4">
+              <i class="fa-solid fa-gamepad text-lg"></i>
+            </div>
+            <h4 class="text-lg font-bold text-white mb-2">Game Design & 3D Assets</h4>
+            <p class="text-xs text-slate-400 mb-4">Creating atmospheric environments, folklore creature concepts, and interactive mechanics.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-200">Roblox Studio</span>
+              <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-200">3D Asset Design</span>
+              <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-200">Level Design</span>
+            </div>
+          </div>
+
+          <!-- Skill Card 4 -->
+          <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-brand-500/40 transition">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center mb-4">
+              <i class="fa-solid fa-screwdriver-wrench text-lg"></i>
+            </div>
+            <h4 class="text-lg font-bold text-white mb-2">PC Hardware & Digital Media</h4>
+            <p class="text-xs text-slate-400 mb-4">Desktop PC assembly, GPU/SSD upgrades, photo restoration, and AI video production.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-200">PC Troubleshooting</span>
+              <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-200">Image Editing</span>
+              <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-200">AI Video Production</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. PROJECTS SECTION -->
+  <section id="projects" class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto space-y-12">
+    <div class="text-center max-w-2xl mx-auto space-y-2">
+      <h2 class="text-xs font-bold uppercase tracking-widest text-brand-400">Portfolio Showcase</h2>
+      <p class="text-3xl sm:text-4xl font-extrabold text-white">Featured Class & Personal Projects</p>
+      <p class="text-slate-400 text-sm">A collection of academic capstone work, course programming projects, and creative builds.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+      <!-- Project 1: Lucky 3 Lending -->
+      <article class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden flex flex-col justify-between hover:border-brand-500/50 transition group">
+        <div>
+          <div class="h-48 bg-gradient-to-br from-sky-900/60 via-slate-900 to-indigo-950 p-6 flex flex-col justify-between border-b border-slate-800 relative overflow-hidden">
+            <div class="flex justify-between items-center z-10">
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-brand-500/20 text-brand-300 border border-brand-500/30">Queue Management System</span>
+              <i class="fa-solid fa-ticket text-2xl text-brand-400/70"></i>
+            </div>
+            <div class="z-10">
+              <p class="text-xs font-mono text-slate-400">Enhanced Queue Management System</p>
+              <h3 class="text-2xl font-extrabold text-white group-hover:text-brand-400 transition">Lucky 3 Lending</h3>
+            </div>
+          </div>
+
+          <div class="p-6 space-y-4">
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Modern, interactive queue management with real-time updates.
+            </p>
+            <div class="bg-slate-950/70 border border-slate-800/80 rounded-xl p-3.5 text-xs space-y-1.5">
+              <p class="font-bold text-slate-200">One system, three interfaces:</p>
+              <p class="text-slate-400">Kiosk, Display Panel, and Admin Dashboard — all in one system.</p>
+            </div>
+          </div>
+        </div>
+        <div class="px-6 pb-6 pt-2 flex items-center justify-between border-t border-slate-800/60 text-xs">
+          <span class="text-slate-400 font-mono">Real-Time &bull; Kiosk &bull; Dashboard</span>
+          <a href="https://jannnnn12.github.io/Lucky3/" target="_blank" rel="noopener" class="text-brand-400 hover:underline font-semibold flex items-center gap-1">
+            View Live System <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- Project 2: Sigbin Hunt -->
+      <article class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden flex flex-col justify-between hover:border-brand-500/50 transition group">
+        <div>
+          <div class="h-48 bg-gradient-to-br from-emerald-950/70 via-slate-900 to-slate-950 p-6 flex flex-col justify-between border-b border-slate-800 relative overflow-hidden">
+            <div class="flex justify-between items-center z-10">
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">Game Development</span>
+              <i class="fa-solid fa-ghost text-2xl text-emerald-400/70"></i>
+            </div>
+            <div class="z-10">
+              <p class="text-xs font-mono text-slate-400">Roblox First-Person Horror</p>
+              <h3 class="text-2xl font-extrabold text-white group-hover:text-emerald-400 transition">Sigbin Hunt</h3>
+            </div>
+          </div>
+
+          <div class="p-6 space-y-4">
+            <p class="text-slate-300 text-sm leading-relaxed">
+              A first-person survival horror game set in rural Naga, Cebu, bringing local Philippine folklore to life through atmospheric lighting and custom 3D creature encounters.
+            </p>
+            <div class="bg-slate-950/70 border border-slate-800/80 rounded-xl p-3.5 text-xs space-y-1.5">
+              <p class="font-bold text-slate-200">My Contribution:</p>
+              <p class="text-slate-400">Collaborated with student peers on environment design, created the custom folklore-inspired Sigbin creature reference sheet, and integrated 3D assets and gameplay mechanics.</p>
+            </div>
+          </div>
+        </div>
+        <div class="px-6 pb-6 pt-2 flex items-center justify-between border-t border-slate-800/60 text-xs">
+          <span class="text-slate-400 font-mono">Roblox Studio &bull; 3D Modeling</span>
+          <a href="https://www.roblox.com/games/109061994506867/Sigbin-Hunt" target="_blank" rel="noopener" class="text-emerald-400 hover:underline font-semibold flex items-center gap-1">
+            Play on Roblox <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- Project 3: Arnis Legends 3D Game -->
+      <article class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden flex flex-col justify-between hover:border-brand-500/50 transition group">
+        <div>
+          <div class="h-48 bg-gradient-to-br from-emerald-950/70 via-slate-900 to-amber-950/40 p-6 flex flex-col justify-between border-b border-slate-800 relative overflow-hidden">
+            <div class="flex justify-between items-center z-10">
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">3D Game Development</span>
+              <i class="fa-solid fa-gamepad text-2xl text-emerald-400/70"></i>
+            </div>
+            <div class="z-10">
+              <p class="text-xs font-mono text-slate-400">Browser-Based 3D Fighting Game</p>
+              <h3 class="text-2xl font-extrabold text-white group-hover:text-emerald-400 transition">Arnis Legends</h3>
+            </div>
+          </div>
+
+          <div class="p-6 space-y-4">
+            <p class="text-slate-300 text-sm leading-relaxed">
+              A 3D browser fighting game inspired by Arnis, featuring two fighters and interactive combat in a bamboo-themed arena.
+            </p>
+            <div class="bg-slate-950/70 border border-slate-800/80 rounded-xl p-3.5 text-xs space-y-1.5">
+              <p class="font-bold text-slate-200">My Contribution:</p>
+              <p class="text-slate-400">Built the game experience, including its 3D fighting interface, player controls, and supporting instructions page.</p>
+            </div>
+          </div>
+        </div>
+        <div class="px-6 pb-6 pt-2 flex flex-wrap items-center justify-between gap-3 border-t border-slate-800/60 text-xs">
+          <span class="text-slate-400 font-mono">3D &bull; JavaScript &bull; Arnis</span>
+          <div class="flex items-center gap-4">
+            <a href="https://jannnnn12.github.io/Arnislegends3dgame/" target="_blank" rel="noopener" class="text-emerald-400 hover:underline font-semibold flex items-center gap-1">
+              Play Game <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+            <a href="https://github.com/jannnnn12/Arnislegends3dgame" target="_blank" rel="noopener" class="text-slate-300 hover:underline font-semibold flex items-center gap-1">
+              Source <i class="fa-brands fa-github text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 4: Kwentong Damdamin Digital Series -->
+      <article class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden flex flex-col justify-between hover:border-brand-500/50 transition group">
+        <div>
+          <div class="h-48 bg-gradient-to-br from-amber-950/60 via-slate-900 to-slate-950 p-6 flex flex-col justify-between border-b border-slate-800 relative overflow-hidden">
+            <div class="flex justify-between items-center z-10">
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/20 text-amber-300 border border-amber-500/30">AI & Digital Media</span>
+              <i class="fa-solid fa-film text-2xl text-amber-400/70"></i>
+            </div>
+            <div class="z-10">
+              <p class="text-xs font-mono text-slate-400">Vertical Short Drama Production</p>
+              <h3 class="text-2xl font-extrabold text-white group-hover:text-amber-400 transition">Kwentong Damdamin Series</h3>
+            </div>
+          </div>
+
+          <div class="p-6 space-y-4">
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Produced multi-episode 9:16 vertical short dramas including <em>"Ang Asawang Iniwan Dahil Mahirap"</em> and <em>"Ang Nanay na Pinalayas"</em> using AI-assisted workflows.
+            </p>
+            <div class="bg-slate-950/70 border border-slate-800/80 rounded-xl p-3.5 text-xs space-y-1.5">
+              <p class="font-bold text-slate-200">My Contribution:</p>
+              <p class="text-slate-400">Directed the storyline, engineered character consistency reference sheets, edited 9:16 mobile video layouts, and added burned-in Filipino subtitles.</p>
+            </div>
+          </div>
+        </div>
+        <div class="px-6 pb-6 pt-2 flex flex-wrap items-center justify-between gap-3 border-t border-slate-800/60 text-xs">
+          <span class="text-slate-400 font-mono">AI Workflows &bull; Video Direction</span>
+          <div class="flex items-center gap-4">
+            <a href="https://www.facebook.com/profile.php?id=61594928015155" target="_blank" rel="noopener" class="text-blue-400 hover:underline font-semibold flex items-center gap-1">
+              Facebook <i class="fa-brands fa-facebook text-xs"></i>
+            </a>
+            <a href="#contact" class="text-amber-400 hover:underline font-semibold flex items-center gap-1">
+              Inquire <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- 4. CONTACT SECTION -->
+  <section id="contact" class="py-16 md:py-24 bg-slate-900/60 border-t border-slate-800 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto text-center space-y-6">
+      <h2 class="text-xs font-bold uppercase tracking-widest text-brand-400">Get In Touch</h2>
+      <p class="text-3xl sm:text-4xl font-extrabold text-white">Let's Work Together</p>
+      <p class="text-slate-400 text-sm sm:text-base max-w-xl mx-auto">
+        Have a question about my class projects, need help with a web or IoT build, or want to collaborate? Send me an email or connect with me on GitHub.
+      </p>
+
+      <!-- Replace your.email@example.com with your actual email address -->
+      <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="mailto:meljohnsumalinog@gmail.com" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-brand-500 hover:bg-brand-400 text-slate-950 font-bold shadow-lg shadow-brand-500/20 transition flex items-center justify-center gap-3">
+          <i class="fa-solid fa-envelope"></i>
+          <span>Send Me an Email</span>
+        </a>
+        <a href="https://github.com/" target="_blank" rel="noopener" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 font-semibold border border-slate-700 transition flex items-center justify-center gap-3">
+          <i class="fa-brands fa-github text-lg"></i>
+          <span>GitHub Profile</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 border-t border-slate-900 text-center text-xs text-slate-500 px-4">
+    <p>&copy; 2026 Meljohn Lozada Sumalinog (Jann). Built with HTML, Tailwind CSS &amp; JavaScript. Hosted on GitHub Pages.</p>
+  </footer>
+
+  <!-- Mobile Menu Script -->
+  <script>
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      if (mobileMenu.classList.contains('hidden')) {
+        menuIcon.classList.remove('fa-xmark');
+        menuIcon.classList.add('fa-bars');
+      } else {
+        menuIcon.classList.remove('fa-bars');
+        menuIcon.classList.add('fa-xmark');
+      }
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuIcon.classList.remove('fa-xmark');
+        menuIcon.classList.add('fa-bars');
+      });
+    });
+  </script>
+</body>
+</html>
